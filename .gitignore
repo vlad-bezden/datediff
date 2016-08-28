@@ -7,6 +7,3 @@ node_modules
 
 # Runtime data
 .vscode
-
-# Output directory
-build
