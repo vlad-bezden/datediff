@@ -1,0 +1,23 @@
+{
+  "name": "datediff",
+  "version": "1.0.0",
+  "description": "Calculates difference between two date(times)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run test",
+    "test": "node build/server.js 2016-07-09",
+    "build": "webpack"
+  },
+  "keywords": [
+    "diff",
+    "difference",
+    "time",
+    "date",
+    "interval"
+  ],
+  "author": "Vlad Bezden",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.14.1"
+  }
+}
