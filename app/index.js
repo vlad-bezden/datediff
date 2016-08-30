@@ -8,8 +8,7 @@ if (args.length < 1 || args.length > 2) {
     process.exit(-1)
 }
 
-const params = utils.parse(...args)
-const diff = utils.duration(params)
-const result = utils.calculate(params, diff)
+const dates = utils.parse(...args)
+const result = utils.calculate(dates)
 
 outputs.print(result)

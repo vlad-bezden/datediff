@@ -7,13 +7,10 @@ exports.parse = function (startDate, endDate = Date.now()) {
     }
 }
 
-exports.duration = function (duration) {
-    return moment.duration(duration.endDate - duration.startDate)
-}
-
-exports.calculate = function (params, diff) {
+exports.calculate = function (dates) {
+    const diff = moment.duration(dates.endDate - dates.startDate)
     return {
-        dates: params,
+        dates,
         full: {
             years: diff.years(),
             months: diff.months(),
@@ -21,7 +18,7 @@ exports.calculate = function (params, diff) {
             hours: diff.hours(),
             minutes: diff.minutes(),
             seconds: diff.seconds(),
-            milliseconds: diff.milliseconds()            
+            milliseconds: diff.milliseconds()
         },
         asYears: diff.asYears(),
         asMonths: diff.asMonths(),
