@@ -10,6 +10,6 @@ if (args.length < 1 || args.length > 2) {
 
 const params = utils.parse(...args)
 const diff = utils.duration(params)
-const result = utils.calculate(diff)
+const result = utils.calculate(params, diff)
 
 outputs.print(result)

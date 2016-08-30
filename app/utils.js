@@ -11,8 +11,9 @@ exports.duration = function (duration) {
     return moment.duration(duration.endDate - duration.startDate)
 }
 
-exports.calculate = function (diff) {
+exports.calculate = function (params, diff) {
     return {
+        dates: params,
         full: {
             years: diff.years(),
             months: diff.months(),

@@ -56,7 +56,7 @@
 
 	const params = utils.parse(...args)
 	const diff = utils.duration(params)
-	const result = utils.calculate(diff)
+	const result = utils.calculate(params, diff)
 
 	outputs.print(result)
 	/* WEBPACK VAR INJECTION */}.call(exports, "/index.js"))
@@ -78,8 +78,9 @@
 	    return moment.duration(duration.endDate - duration.startDate)
 	}
 
-	exports.calculate = function (diff) {
+	exports.calculate = function (params, diff) {
 	    return {
+	        dates: params,
 	        full: {
 	            years: diff.years(),
 	            months: diff.months(),
